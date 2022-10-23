@@ -1,23 +1,24 @@
 const ACCESS_TOKEN =
-  "1fmtkDbW7Dd6ZhWICDMC4SwlY__eXp16l7nO6AZhQRT0";
+  "ya29.a0Aa4xrXPLtZey3urp_-foFFt8JB4MVPKiz-SglgF5QREPqvfcdUCCY57w8ipPkJzfY9lDkcyLuoCzRtUbZA1yv7XK53e60Hun9EhWtMS0EnZEn27RCQtRWjzcRtdQAahXxIGkgrUmMYAFPbb4QapyuYZumSmRaCgYKATASARESFQEjDvL9S-HQwdaehUeNFB-mJyOA-g0163";
  
 const SHEET_ID = '1fmtkDbW7Dd6ZhWICDMC4SwlY__eXp16l7nO6AZhQRT0';
+
+
 
 function onRegistrarEmprendedor() {
 
   //Obtenemos los datos del formulario
   const Rubro = document.getElementById('Rubro').value;
-  const Sector de Actividad = document.getElementById('sector-actividad').value;
-  const Nombre y Apellido = document.getElementById('Nombre y Apellido').value;
+  const NombreyApellido = document.getElementById('Nombre y Apellido').value;
   const RUC = document.getElementById('RUC').value;
-  const Número de contacto = document.getElementById('Número de contacto').value;
+  const Númerodecontacto = document.getElementById('Númerodecontacto').value;
   
   //Creamos el JSON que espera nuestra API
   let data = {};
   
   let values = [];
   
-  let fila = [Rubro, Sector de Actividad, Nombre y Apellido, RUC, Número de contacto];
+  let fila = [Rubro, NombreyApellido, RUC, Númerodecontacto];
 
   values.push(fila);
   
@@ -45,7 +46,7 @@ function onRegistrarEmprendedor() {
   });
 
   //Limpiamos los campos del formulario para permitir cargar un nuevo emprendedor
-  document.getElementById('Nombre y Apellido').value = "";
-  document.getElementById('RUC').valueAsDate = new Date();
-  document.getElementById('Númerode contacto').value = "";
+  document.getElementById('NombreyApellido').value = "";
+  document.getElementById('RUC').value = "";
+  document.getElementById('Númerodecontacto').value = "";
 };
